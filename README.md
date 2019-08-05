@@ -2,7 +2,7 @@
 
 > A translate tool in terminal
 
-<img alt="fanyi.png" src="./fanyi.png" style="border-radius: 4px;">
+<img alt="fanyi.png" src="./fanyi.png" style="border-radius: 4px !important;">
 
 ## install
 
