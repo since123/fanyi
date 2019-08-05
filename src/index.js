@@ -8,7 +8,7 @@ program
   .command("*")
   .description("type text to translate")
   .action(async () => {
-    console.log("\r\n");
+    console.log("");
     const query = process.argv.slice(2).join(" ");
     const spinner = ora(``);
     spinner.start();
@@ -30,24 +30,24 @@ program
     console.log(meta);
 
     if (explains.length) {
-      console.log("\r\n");
+      console.log("");
       explains.forEach(explain => {
-        console.log(`- ${chalk.green(explain)}`);
+        console.log(`  - ${chalk.green(explain)}`);
       });
     }
 
     if (wfs.length) {
-      console.log("\r\n");
+      console.log("");
       wfs.forEach(w => {
-        console.log(`· ${chalk.gray(w.wf.name)} ${chalk.cyan(w.wf.value)}`);
+        console.log(`  · ${chalk.gray(w.wf.name)} ${chalk.cyan(w.wf.value)}`);
       });
     }
 
     if (web.length) {
-      console.log("\r\n");
+      console.log("");
       web.forEach((w, i) => {
-        console.log(`${i}. ${chalk.yellow(w.key)}`);
-        console.log("  ", chalk.blue(w.value));
+        console.log(`  ${chalk.gray(i + 1)}. ${chalk.yellow(w.key)}`);
+        console.log("    ", chalk.white(w.value));
       });
     }
 
